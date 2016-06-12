@@ -1,14 +1,14 @@
 {
-  "name": "mi9code",
+  "name": "codechallenge",
   "version": "1.0.0",
-  "description": "9Digital Coding Challenge",
+  "description": "Coding Challenge to create a service",
   "main": "index.js",
   "test": "mocha ./test",
   "scripts": {
     "test": "mocha"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.15.1",
     "chai": "^3.5.0",
