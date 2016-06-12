@@ -4,7 +4,8 @@ mi9 code challenge accepts the request as json format and responds with filtered
 
 # Usage
 
-Gives filtered response
+Gives filtered response/ valid error for the requested json
+
 
 # Testing
 
