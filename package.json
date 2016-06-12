@@ -1,0 +1,20 @@
+{
+  "name": "mi9code",
+  "version": "1.0.0",
+  "description": "9Digital Coding Challenge",
+  "main": "index.js",
+  "test": "mocha ./test",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.15.1",
+    "chai": "^3.5.0",
+    "express": "^4.13.4",
+    "lodash": "^4.13.1",
+    "mocha": "^2.5.3",
+    "nodemon": "^1.9.2"
+  }
+}
