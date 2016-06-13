@@ -25,25 +25,25 @@ app.set('port', (process.env.PORT || 9001));
  *
  */
 
-app.get('/', function(req, res) {
+app.all('/*', function(req, res) {
 
-    // initilizing vars
+    // initilizing variables
     var requestJson = req.body;
     var responseObject = {};
     var errorResponseObject = { "error": "" };
-    
-        // callback to reply with error message for invalid request 
-        res.setHeader('Content-Type', 'application/json');
-        responseObject = filterJson.filteredJson(requestJson, function(error){
-            res.status(400);
-            errorResponseObject.error = error.message;
-            res.send(JSON.stringify(errorResponseObject));
-            return;
-        });
-        if (!(_.isEmpty(responseObject))) {
-            res.status(200);
-        }
 
+    // callback to reply with error message for invalid request 
+    res.setHeader('Content-Type', 'application/json');
+    responseObject = filterJson.filteredJson(requestJson, function(error) {
+        res.status(400);
+        errorResponseObject.error = error.message;
+        res.send(JSON.stringify(errorResponseObject));
+        return;
+    });
+
+    if (!(_.isEmpty(responseObject))) {
+        res.status(200);
+    }
     res.send(JSON.stringify(responseObject));
 });
 
