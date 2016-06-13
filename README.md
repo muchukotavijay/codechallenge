@@ -1,6 +1,6 @@
-# mi9code challenge
+# Code challenge
 
-mi9 code challenge accepts the request as json format and responds with filtered response
+Code challenge accepts the request as json format and responds with filtered response
 
 # Usage
 
