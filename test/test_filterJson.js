@@ -2,8 +2,9 @@
 
 var assert = require('assert');
 var filterJsonObj = require('../lib/filterJson');
+var indexObject = require('../lib/index');
 
-describe('filterjson module tests', function() {
+describe('filterjson/index module tests', function() {
     var fixureObject ;
 
     before(function () {
@@ -11,13 +12,13 @@ describe('filterjson module tests', function() {
     });
 
     it('should throw error if object is empty / payload not available', function() {
-    	var responseJsonObj = filterJsonObj.filteredJson(fixureObject.emptyRequest, function(error){
+        var responseJsonObj = indexObject.validateRequest(fixureObject.emptyRequest, function(error){
             assert.equal(error.message,"Could not decode request: JSON parsing failed");
         });
     });
 
     it('should throw error if payload is not an array', function() {
-    	var responseJsonObj = filterJsonObj.filteredJson(fixureObject.emptyPayload, function(error){
+        var responseJsonObj = indexObject.validateRequest(fixureObject.emptyPayload, function(error){
             assert.equal(error.message,"Could not decode request: JSON parsing failed");
         });
     });

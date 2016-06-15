@@ -2,7 +2,7 @@
   "name": "codechallenge",
   "version": "1.0.0",
   "description": "Coding Challenge to create a service",
-  "main": "index.js",
+  "main": "app.js",
   "test": "mocha ./test",
   "scripts": {
     "test": "mocha"
